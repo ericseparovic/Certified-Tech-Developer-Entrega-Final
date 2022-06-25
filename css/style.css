@@ -1,0 +1,32 @@
+/* Variables */
+:root {
+  /* Colores primarios */
+  --rojo-brillante: rgb(242, 95, 58);
+  --azul-oscuro: rgb(35, 44, 81);
+
+  /* Colores neutros */
+  --azul-grisáceo-oscuro: rgb(143, 148, 167);
+  --azul-muy-oscuro: rgb(29, 30, 37);
+  --rojo-muy-pálido: rgb(255, 239, 234);
+  --variante-gris-claro: rgb(249, 249, 249);
+
+  /* Font */
+  --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
+}
+
+/* Estilos generales */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem = 10px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
