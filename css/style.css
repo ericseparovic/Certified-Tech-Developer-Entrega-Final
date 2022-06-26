@@ -26,18 +26,18 @@ html {
 }
 
 body {
+  font-family: var(--font-vietnam-pro);
+  font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  font-size: 1.6rem;
-  font-family: var(--font-vietnam-pro);
 }
 
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  display: flex;
   height: 15rem;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .header .menu {
@@ -50,6 +50,7 @@ body {
 }
 
 .menu .menu__item a {
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -59,11 +60,14 @@ body {
 
 .button-get {
   border-radius: 4rem;
-  padding: 1.5rem 3rem;
   border: none;
-  cursor: pointer;
-  outline: none;
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  min-width: 15rem;
+  outline: none;
+  padding: 1.5rem 0rem;
 }
 
 .button-get--red {
