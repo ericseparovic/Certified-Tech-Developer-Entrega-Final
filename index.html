@@ -15,36 +15,38 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header__img">
+    <header class="header container">
+        <div class="header__logo">
             <img src="/img/logo.svg" alt="logo">
         </div>
-        <nav>
-            <ul class="menu">
-                <li class="menu__item menu__item--blue"><a href="#">Pricing</a></li>
-                <li class="menu__item menu__item--blue"><a href="#">Product</a></li>
-                <li class="menu__item menu__item--blue"><a href="#">About Us</a></li>
-                <li class="menu__item menu__item--blue"><a href="#">Careers</a></li>
-                <li class="menu__item menu__item--blue"><a href="#">Community</a></li>
-            </ul>
+        <nav class="nav">
+            <a class="nav__link nav__link--blue" href="#">Pricing</a>
+            <a class="nav__link nav__link--blue" href="#">Product</a>
+            <a class="nav__link nav__link--blue" href="#">About Us</a>
+            <a class="nav__link nav__link--blue" href="#">Careers</a>
+            <a class="nav__link nav__link--blue" href="#">Community</a>
         </nav>
+        <div class="header__hamburger">
+            <img src="/img/icon-hamburger.svg" alt="icon-hamburger">
+        </div>
         <button class="button-get button-get--red">Get Started</button>
     </header>
 
     <!-- Main -->
-    <main>
-        <section>
-            <div>
-                <h1>Bring everyone together to build better products.</h1>
-                <p>Manage makes it simple for software teams to plan day-to-day task while keeping the large team goals
+    <main class="main container">
+        <section class="main__container-info">
+            <div class="info">
+                <h1 class="info__title">Bring everyone together to build better products.</h1>
+                <p class="info__description">Manage makes it simple for software teams to plan day-to-day task while
+                    keeping the large team goals
                     in view</p>
-                <button>Get Started</button>
+                <button class="button-get button-get--red">Get Started</button>
             </div>
-            <div>
+            <div class="main__graph">
                 <img src="/img/illustration-intro.svg" alt="illustration-intro">
             </div>
         </section>
-        <section>
+        <section class="main__container-different">
             <div>
                 <h2>What's different about Manage?</h2>
                 <p>Manage provides all the functionality your teas needs, without the complexity. Our software is
@@ -68,7 +70,7 @@
                 </dl>
             </div>
         </section>
-        <section>
+        <section class="main__container-comments">
             <h2>What they've said</h2>
             <div>
                 <div>

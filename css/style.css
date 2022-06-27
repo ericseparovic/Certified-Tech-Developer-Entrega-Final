@@ -2,10 +2,10 @@
 :root {
   /* Colores primarios */
   --color-1-button: rgb(242, 95, 58);
+  --color-title: rgb(35, 44, 81);
   --color-link: rgb(35, 44, 81);
-
   /* Colores neutros */
-  --azul-grisáceo-oscuro: rgb(143, 148, 167);
+  --color-text: rgb(143, 148, 167);
   --azul-muy-oscuro: rgb(29, 30, 37);
   --rojo-muy-pálido: rgb(255, 239, 234);
   --variante-gris-claro: rgb(249, 249, 249);
@@ -14,7 +14,7 @@
   --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
 }
 
-/* Estilos generales */
+/*Estilos generales */
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*1rem = 10px*/
@@ -26,35 +26,60 @@ html {
 }
 
 body {
+  background-image: url("../img/bg-simplify-section-desktop.svg");
+  background-position: top;
+  background-repeat: no-repeat;
   font-family: var(--font-vietnam-pro);
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  padding: 2rem 20rem;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 1250px) {
+  .container {
+    padding: 1rem 5rem;
+  }
+}
+
+/* Estilos header */
 .header {
   align-items: center;
   display: flex;
   height: 15rem;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 
-.header .menu {
+.header .nav {
   display: flex;
   gap: 2rem;
 }
 
-.menu .menu__item {
-  list-style: none;
+.header__hamburger {
+  display: none;
 }
 
-.menu .menu__item a {
+.nav__link {
   font-weight: 500;
   text-decoration: none;
 }
 
-.menu .menu__item--blue a {
+.nav__link--blue {
   color: var(--color-link);
 }
 
@@ -73,4 +98,111 @@ body {
 .button-get--red {
   background-color: var(--color-1-button);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+/* Media Queries Header Mobile */
+@media (max-width: 375px) {
+  /* body {
+    background-image: url("/img/bg-tablet-pattern.svg");
+    background-position: -38% -4%;
+    background-repeat: no-repeat;
+    background-size: 50rem;
+  } */
+  .header {
+    height: 12rem;
+  }
+
+  .header .nav {
+    display: none;
+  }
+
+  .header__logo {
+    height: 3rem;
+  }
+
+  .header .button-get {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+    height: 3rem;
+  }
+}
+
+/* Media queries screen 376px-860px */
+@media (min-width: 376px) and (max-width: 860px) {
+  .header .nav {
+    display: none;
+  }
+
+  .header .button-get {
+    display: none;
+  }
+
+  .header__logo {
+    height: 3rem;
+  }
+
+  .header__hamburger {
+    display: block;
+    height: 3rem;
+  }
+}
+
+/* Estilos main */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__container-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.info {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+.main__graph {
+  flex: 1;
+}
+
+.info__title {
+  color: var(--color-title);
+  font-size: 5rem;
+}
+
+.info__description {
+  color: var(--color-text);
+  line-height: 3rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 375px) {
+  .main__container-info {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .info__title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 960px) {
+  .main__container-info {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .info__title {
+    font-size: 4rem;
+  }
 }
