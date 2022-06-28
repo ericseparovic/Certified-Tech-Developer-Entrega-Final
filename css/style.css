@@ -1,14 +1,14 @@
 /* Variables */
 :root {
   /* Colores primarios */
-  --color-1-button: rgb(242, 95, 58);
-  --color-title: rgb(35, 44, 81);
+  --color-red: rgb(242, 95, 58);
+  --color-heading: rgb(35, 44, 81);
   --color-link: rgb(35, 44, 81);
   /* Colores neutros */
-  --color-text: rgb(143, 148, 167);
+  --color-paragraphs: rgb(143, 148, 167);
   --azul-muy-oscuro: rgb(29, 30, 37);
-  --rojo-muy-pálido: rgb(255, 239, 234);
-  --variante-gris-claro: rgb(249, 249, 249);
+  --color-bg-list: rgb(255, 239, 234);
+  --color-bg-card: rgb(249, 249, 249);
 
   /* Font */
   --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
@@ -33,6 +33,7 @@ body {
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -95,8 +96,8 @@ img {
   padding: 1.5rem 0rem;
 }
 
-.button-get--red {
-  background-color: var(--color-1-button);
+.button-get--color-bg {
+  background-color: var(--color-red);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
 
@@ -131,7 +132,7 @@ img {
 }
 
 /* Media queries screen 376px-860px */
-@media (min-width: 376px) and (max-width: 860px) {
+@media (min-width: 376px) and (max-width: 960px) {
   .header .nav {
     display: none;
   }
@@ -163,6 +164,7 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 10rem;
 }
 
 .info {
@@ -170,21 +172,83 @@ img {
   padding-bottom: 3rem;
 }
 
-.main__graph {
+.main__graph,
+.main__list {
   flex: 1;
 }
 
 .info__title {
-  color: var(--color-title);
+  color: var(--color-heading);
   font-size: 5rem;
 }
 
 .info__description {
-  color: var(--color-text);
+  color: var(--color-paragraphs);
   line-height: 3rem;
   padding-bottom: 2rem;
 }
 
+.main__container-different {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.about {
+  padding-right: 10rem;
+  flex: 1;
+}
+
+.main__list {
+  flex: 1;
+}
+.about__title {
+  font-size: 3.8rem;
+  color: var(--color-heading);
+  margin: 0;
+  margin-bottom: 6rem;
+}
+
+.about__description {
+  color: var(--color-paragraphs);
+  line-height: 3rem;
+}
+
+.items-difference__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.items-difference__number {
+  background-color: var(--color-red);
+  display: inline-block;
+  border-radius: 4rem;
+  color: white;
+  font-weight: bold;
+  padding: 1.2rem 3rem;
+  font-size: 1.8rem;
+}
+
+.items-difference__title {
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--color-heading);
+}
+
+.items-difference__body {
+  padding-left: 10rem;
+  margin: 2rem 0 5rem 0;
+}
+
+.items-difference__text {
+  color: var(--color-paragraphs);
+  line-height: 3rem;
+  margin: 0;
+}
+
+/* Media queries main screen 0-375px */
 @media (max-width: 375px) {
   .main__container-info {
     flex-direction: column-reverse;
@@ -194,8 +258,53 @@ img {
   .info__title {
     font-size: 3.5rem;
   }
+
+  .main__container-different {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about {
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__title {
+    font-size: 3rem;
+  }
+
+  .about__description {
+    margin-bottom: 8rem;
+  }
+
+  .items-difference__title {
+    padding-left: 1rem;
+  }
+
+  .items-difference__body {
+    padding-left: 0;
+    margin-bottom: 10rem;
+  }
+
+  .items-difference__number {
+    padding: 1rem 2.7rem;
+  }
+
+  .items-difference__title {
+    font-size: 1.6rem;
+  }
+
+  .items-difference__header {
+    background-color: var(--color-bg-list);
+    position: absolute;
+    width: 100%;
+    border-radius: 4rem;
+    margin-top: -6rem;
+  }
 }
 
+/* Media queries main screen 376px-960px */
 @media (min-width: 376px) and (max-width: 960px) {
   .main__container-info {
     flex-direction: column-reverse;
@@ -203,6 +312,142 @@ img {
   }
 
   .info__title {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  .main__container-different {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about {
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__title {
+    font-size: 3rem;
+  }
+
+  .about__description {
+    margin-bottom: 8rem;
+  }
+
+  .items-difference__title {
+    padding-left: 1rem;
+  }
+
+  .items-difference__body {
+    padding-left: 0;
+    margin-bottom: 10rem;
+  }
+
+  .items-difference__number {
+    padding: 1rem 2.7rem;
+  }
+
+  .items-difference__title {
+    font-size: 1.6rem;
+  }
+
+  .items-difference__header {
+    background-color: var(--color-bg-list);
+    position: absolute;
+    width: 100%;
+    border-radius: 4rem;
+    margin-top: -6rem;
+  }
+}
+
+/* --------------------COMMENT--------------------- */
+
+.comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+
+.comments__title {
+  font-size: 3.8rem;
+  color: var(--color-heading);
+}
+
+.comments__cards {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  width: 55rem;
+  background-color: var(--color-bg-card);
+  position: relative;
+  padding: 6rem;
+  text-align: center;
+}
+
+.card__avatar {
+  width: 8rem;
+  position: absolute;
+  top: -15%;
+  right: 43%;
+}
+
+.card__name {
+  color: var(--color-heading);
+}
+
+.card__comment {
+  color: var(--color-paragraphs);
+  line-height: 3rem;
+}
+
+/* Media queries COMMENTS  */
+@media (max-width: 590px) {
+  .card {
+    width: calc(100vw - 3rem);
+  }
+}
+
+/*---------------------BANNER----------------------*/
+
+.banner {
+  width: 100%;
+  height: 30rem;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner__title {
+  color: white;
+  font-size: 3.8rem;
+  max-width: 45rem;
+}
+
+.button-get--color-text {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+/* Media queries banner */
+@media (max-width: 740px) {
+  .comments {
+    margin-bottom: 8rem;
+  }
+  .banner {
+    flex-direction: column;
+    padding: 8rem 3rem;
+    height: auto;
+  }
+
+  .banner__title {
+    text-align: center;
   }
 }
