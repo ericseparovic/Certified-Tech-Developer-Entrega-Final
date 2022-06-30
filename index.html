@@ -133,40 +133,53 @@
         </section>
         <section class="banner container">
             <h3 class="banner__title">Simplify how your team words today.</h3>
-            <button class="button-get button-get--color-text">Get Started</button>
+            <button class="button-get button-get--color">Get Started</button>
         </section>
 
 
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div>
-            <img src="/img/logo.svg" alt="logo">
-            <div>
-                <img src="/img/icon-facebook.svg" alt="icon-facebook">
-                <img src="/img/icon-youtube.svg" alt="icon-youtube">
-                <img src="/img/icon-twitter.svg" alt="icon-twitter">
-                <img src="/img/icon-pinterest.svg" alt="icon-pinterest">
-                <img src="/img/icon-instagram.svg" alt="icon-instagram">
+    <footer class="footer">
+        <div class="footer__icons">
+            <img class="footer__logo" src="/img/logo-white.svg" alt="logo">
+            <div class="icons">
+                <div>
+                    <img class="icon" src="/img/icon-facebook.svg" alt="icon-facebook">
+                </div>
+                <div>
+                    <img class="icon" src="/img/icon-youtube.svg" alt="icon-youtube">
+                </div>
+                <div>
+                    <img class="icon" src="/img/icon-twitter.svg" alt="icon-twitter">
+                </div>
+                <div>
+                    <img class="icon" src="/img/icon-pinterest.svg" alt="icon-pinterest">
+                </div>
+                <div>
+                    <img class="icon" src="/img/icon-instagram.svg" alt="icon-instagram">
+                </div>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li>
+        <nav class="footer__nav">
+            <ul class="nav__links">
+                <li><a class="nav__link nav__link--white" href="#">Home</a></li>
+                <li><a class="nav__link nav__link--white" href="#">Pricing</a></li>
+                <li><a class="nav__link nav__link--white" href="#">Products</a></li>
+                <li><a class="nav__link nav__link--white" href="#">About Us</a></li>
             </ul>
-            <ul>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+            <ul class="nav__links">
+                <li><a class="nav__link nav__link--white" href="#">Careers</a></li>
+                <li><a class="nav__link nav__link--white" href="#">Community</a></li>
+                <li><a class="nav__link nav__link--white" href="#">Privacy Policy</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="email" name="email" id="email">
-            <button type="submit">Go</button>
+        <div class="footer__form">
+            <form class="form">
+                <input class="form__email" type="email" name="email" id="email" placeholder="Updates in your inbox...">
+                <button class="form__button" type="submit">Go</button>
+            </form>
+            <p class="footer__copyright">Copyright 2020 All Right Reserved</p>
         </div>
     </footer>
 </body>

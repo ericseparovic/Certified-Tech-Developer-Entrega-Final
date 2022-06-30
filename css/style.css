@@ -9,6 +9,7 @@
   --azul-muy-oscuro: rgb(29, 30, 37);
   --color-bg-list: rgb(255, 239, 234);
   --color-bg-card: rgb(249, 249, 249);
+  --bg-hover: rgb(206, 149, 135);
 
   /* Font */
   --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
@@ -39,6 +40,10 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
@@ -99,6 +104,10 @@ img {
 .button-get--color-bg {
   background-color: var(--color-red);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.button-get--color-bg:hover {
+  background-color: var(--bg-hover);
 }
 
 /* Media Queries Header Mobile */
@@ -430,9 +439,13 @@ img {
   max-width: 45rem;
 }
 
-.button-get--color-text {
+.button-get--color {
   color: var(--color-red);
   font-weight: 700;
+}
+
+.button-get--color:hover {
+  color: var(--bg-hover);
 }
 
 /* Media queries banner */
@@ -452,3 +465,211 @@ img {
 }
 
 /* /* ----------------------------FOOTER------------------------------- */
+.footer {
+  width: 100%;
+  background-color: var(--azul-muy-oscuro);
+  min-height: 30rem;
+  height: auto;
+  display: flex;
+  padding: 6rem 20rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 15rem;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+
+.footer__logo {
+  height: 3rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__link--white {
+  color: var(--color-paragraphs);
+}
+
+.nav__link--white:hover {
+  color: var(--color-red);
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 10rem;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15rem;
+}
+
+.form__email {
+  width: 22rem;
+  padding: 1.5rem 1.5rem;
+  background-color: white;
+  border-radius: 4rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  color: var(--color-paragraphs);
+}
+
+.form__email::placeholder {
+  color: var(--color-paragraphs);
+  text-align: left;
+}
+
+.form__button {
+  border-radius: 4rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  width: 7rem;
+  outline: none;
+  padding: 1.5rem 0rem;
+  background-color: var(--color-red);
+  margin-left: 1rem;
+}
+
+.form__button:hover {
+  background-color: var(--bg-hover);
+}
+
+.footer__copyright {
+  color: var(--color-paragraphs);
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.footer__form {
+  position: relative;
+}
+
+/* Meida queries FOOTER */
+@media (max-width: 375px) {
+  .footer {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 5rem;
+  }
+
+  .footer__icons {
+    flex-direction: column-reverse;
+    order: 4;
+    gap: 4rem;
+    width: 100%;
+    max-width: none;
+    padding-bottom: 3rem;
+  }
+
+  .icons {
+    justify-content: space-between;
+  }
+
+  .footer__nav {
+    order: 2;
+  }
+
+  .footer__form {
+    order: 1;
+    height: auto;
+  }
+
+  .footer__copyright {
+    position: absolute;
+    bottom: -44rem;
+    right: 5rem;
+  }
+
+  .nav__links {
+    padding-left: 0;
+  }
+
+  .icon {
+    width: 3.4rem;
+  }
+
+  .icon:hover {
+    fill: red;
+  }
+
+  .footer__logo {
+    height: 2.5rem;
+  }
+}
+
+/* Meida queries FOOTER */
+@media (min-width: 376px) and (max-width: 990px) {
+  .footer {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 5rem;
+  }
+
+  .footer__icons {
+    flex-direction: column-reverse;
+    order: 4;
+    gap: 4rem;
+    min-width: 20rem;
+    max-width: 30rem;
+    width: 100%;
+  }
+
+  .icons {
+    justify-content: space-between;
+  }
+
+  .footer__nav {
+    order: 2;
+  }
+
+  .footer__form {
+    order: 1;
+    height: auto;
+  }
+
+  .footer__copyright {
+    position: absolute;
+    bottom: -46rem;
+    right: 5rem;
+  }
+
+  .nav__links {
+    padding-left: 0;
+  }
+
+  .icon {
+    width: 3.4rem;
+  }
+
+  .footer__logo {
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1300px) {
+  .footer {
+    padding: 3rem 5rem;
+  }
+}
