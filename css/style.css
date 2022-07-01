@@ -191,9 +191,9 @@ li {
   padding-bottom: 3rem;
 }
 
-.main__graph,
 .main__list {
   flex: 1;
+  max-width: 73rem;
 }
 
 .info__title {
