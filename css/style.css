@@ -15,7 +15,10 @@
   --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
 }
 
-/*Estilos generales */
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------Estilos Generales--------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*1rem = 10px*/
@@ -65,7 +68,10 @@ li {
   }
 }
 
-/* Estilos header */
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------Header---------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
 .header {
   align-items: center;
   display: flex;
@@ -96,6 +102,10 @@ li {
   color: var(--color-link);
 }
 
+.nav__link--blue:hover {
+  color: var(--color-paragraphs);
+}
+
 .button-get {
   border-radius: 4rem;
   border: none;
@@ -117,7 +127,6 @@ li {
   background-color: var(--bg-hover);
 }
 
-/* Media Queries Header Mobile */
 @media (max-width: 375px) {
   .header {
     height: 12rem;
@@ -141,7 +150,6 @@ li {
   }
 }
 
-/* Media queries screen 376px-860px */
 @media (min-width: 376px) and (max-width: 960px) {
   .header .nav {
     display: none;
@@ -157,7 +165,10 @@ li {
   }
 }
 
-/* Estilos main */
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------------Main---------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
 .main {
   display: flex;
   flex-direction: column;
@@ -258,7 +269,6 @@ li {
   margin: 0;
 }
 
-/* Media queries main screen 0-375px */
 @media (max-width: 375px) {
   .main__container-info {
     flex-direction: column-reverse;
@@ -313,7 +323,6 @@ li {
   }
 }
 
-/* Media queries main screen 376px-960px */
 @media (min-width: 376px) and (max-width: 960px) {
   .main__container-info {
     flex-direction: column-reverse;
@@ -369,13 +378,11 @@ li {
   }
 }
 
-@media (min-width: 990px) and (max-width: 1250px) {
+@media (min-width: 991px) and (max-width: 1250px) {
   .main__container-different {
     padding: 1rem 5rem;
   }
 }
-
-/* --------------------COMMENT--------------------- */
 
 .comments {
   display: flex;
@@ -422,14 +429,12 @@ li {
   line-height: 3rem;
 }
 
-/* Media queries COMMENTS  */
 @media (max-width: 590px) {
   .card {
     width: calc(100vw - 3rem);
   }
 }
 
-/*--------- BANNER-FOOTER---------------------*/
 .banner {
   width: 100%;
   min-height: 30rem;
@@ -455,7 +460,6 @@ li {
   color: var(--bg-hover);
 }
 
-/* Media queries banner */
 @media (max-width: 740px) {
   .comments {
     margin-bottom: 8rem;
@@ -479,7 +483,10 @@ li {
   }
 }
 
-/* /* ----------------------------FOOTER------------------------------- */
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------------Footer-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
 .footer {
   width: 100%;
   background-color: var(--azul-muy-oscuro);
@@ -585,7 +592,6 @@ li {
   cursor: pointer;
 }
 
-/* Meida queries FOOTER */
 @media (max-width: 375px) {
   .footer {
     flex-direction: column;
@@ -634,7 +640,6 @@ li {
   }
 }
 
-/* Meida queries FOOTER */
 @media (min-width: 376px) and (max-width: 990px) {
   .footer {
     flex-direction: column;
