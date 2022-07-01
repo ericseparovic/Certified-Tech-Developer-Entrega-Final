@@ -118,12 +118,12 @@ li {
   padding: 1.5rem 0rem;
 }
 
-.button-get--color-bg {
+.button-get--red {
   background-color: var(--color-red);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
 
-.button-get--color-bg:hover {
+.button-get--red:hover {
   background-color: var(--bg-hover);
 }
 
@@ -429,6 +429,23 @@ li {
   line-height: 3rem;
 }
 
+.radios {
+  display: none;
+  gap: 0.5rem;
+}
+
+.radio {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.2rem solid var(--color-red);
+  border-radius: 50%;
+  margin-bottom: 5rem;
+}
+
+.select-radio {
+  background-color: var(--color-red);
+}
+
 @media (max-width: 590px) {
   .card {
     width: calc(100vw - 3rem);
@@ -451,18 +468,22 @@ li {
   max-width: 45rem;
 }
 
-.button-get--color {
+.button-get--white {
   color: var(--color-red);
   font-weight: 700;
 }
 
-.button-get--color:hover {
+.button-get--white:hover {
   color: var(--bg-hover);
 }
 
 @media (max-width: 740px) {
   .comments {
     margin-bottom: 8rem;
+  }
+
+  .radios {
+    display: flex;
   }
 
   .banner__title {
